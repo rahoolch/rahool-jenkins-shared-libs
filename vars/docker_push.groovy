@@ -3,5 +3,5 @@ def call(String Project, String NameTag){
                     sh "docker login -u ${dockerHubUser} -p ${dockerHubPass} "
                     
                 }
-  sh "docker push ${env.dockerHubUser}/${Project}:${NameTag}"
+  sh "docker push ${dockerHubUser}/${Project}:${NameTag}"
 }
